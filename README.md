@@ -45,6 +45,23 @@ python3 scripts/setup.py
 
 它会安装带校验的固定版本 Gitleaks，并启用本仓库的提交和推送检查。需要 Python 3、Git 和网络；自动安装支持 Linux 与 macOS。
 
+## Agent Skills 随仓库同步
+
+仓库内置四个官方 Skills，完整文件保存在 `.agents/skills/`，无需从这台电脑的用户目录复制：
+
+| Skill | 用途 |
+| --- | --- |
+| `obsidian-cli` | 读取、检索、创建和管理笔记，以及控制 Obsidian |
+| `obsidian-markdown` | Markdown、属性、链接、提示块等笔记格式 |
+| `obsidian-bases` | Bases 数据视图 |
+| `json-canvas` | Canvas 画布 |
+
+在另一台电脑克隆仓库后，用 Codex 打开这个仓库目录，就会自动发现项目中的 Skills。按任务需要加载，也可以明确指定 `$obsidian-cli` 等名称。更新不会立即显示时，重启 Codex。其他 agent 的自动发现规则可能不同。
+
+Skills 提供操作知识，不会自动安装应用。新电脑仍需安装 Obsidian，把克隆目录作为笔记库打开；若要控制应用，在 Obsidian 设置中开启并注册官方 CLI，并保持应用运行。只有 Markdown 文件读写时，可以直接使用 agent 的文件工具。
+
+`python3 scripts/setup.py` 用于安装提交检查并启用 Git 钩子；Skills 自动发现本身不依赖这个脚本。来源和版本见 [Skills 说明](.agents/skills/README.md) 及 [skills-lock.json](skills-lock.json)。
+
 ## 通过 GitHub 同步
 
 远程仓库：[fanfan-de/public-notes](https://github.com/fanfan-de/public-notes)。

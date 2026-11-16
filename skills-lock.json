@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "skills": {
+    "obsidian-cli": {
+      "source": "https://github.com/obsidianmd/obsidian-skills",
+      "revision": "398127736bd4ba42d767b1419fee1a927508370b",
+      "path": "plugins/obsidian/skills/obsidian-cli",
+      "files": {
+        "SKILL.md": "28f66289b1cf1d245807766d4dafb6f5f76eadc986fe4a7f224da51f50aa7524"
+      }
+    },
+    "obsidian-markdown": {
+      "source": "https://github.com/obsidianmd/obsidian-skills",
+      "revision": "398127736bd4ba42d767b1419fee1a927508370b",
+      "path": "plugins/obsidian/skills/obsidian-markdown",
+      "files": {
+        "SKILL.md": "f1c4ff5257d3f9743af797d755cabeef129f553704d5ff67ebf1239f9569f081",
+        "references/CALLOUTS.md": "9912ec2e3f8711f65b8ceb82cc19cbffc5e6f8ccf2ab627e18926c522c383d8b",
+        "references/EMBEDS.md": "63b6205507e28fb58cf200bc348a2b139e50ae739743e2e6316732148973cb7a",
+        "references/PROPERTIES.md": "f2d01b096a1c981a675e86b6a8c46bab271b278497646d465467b8120043b87c"
+      }
+    },
+    "obsidian-bases": {
+      "source": "https://github.com/obsidianmd/obsidian-skills",
+      "revision": "398127736bd4ba42d767b1419fee1a927508370b",
+      "path": "plugins/obsidian/skills/obsidian-bases",
+      "files": {
+        "SKILL.md": "7a1659e2c00e7b74c8767002213dd977967ddd30dd15a7f33b693e783a4546e9",
+        "references/FUNCTIONS_REFERENCE.md": "208fd63aead9bca1975626fea52605e6ab9434dc0529d923feb36b18b8877d3b"
+      }
+    },
+    "json-canvas": {
+      "source": "https://github.com/obsidianmd/obsidian-skills",
+      "revision": "398127736bd4ba42d767b1419fee1a927508370b",
+      "path": "plugins/obsidian/skills/json-canvas",
+      "files": {
+        "SKILL.md": "4db4e69eea910b598c249e41bcdda85a70856348adaf11c35371198e258d50a6",
+        "references/EXAMPLES.md": "f5ce15a4b74643122396265e8c37c828874a4005794de2aee7030662968768eb"
+      }
+    }
+  }
+}

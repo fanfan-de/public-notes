@@ -19,6 +19,14 @@ This is a public personal knowledge vault, published through GitHub. AI and agen
 - Prefer Markdown and Mermaid. Put small images under assets/. Each tracked file must be at most 1 MiB; prefer images under 300 KiB. Link to large public material instead of copying it.
 - Keep .obsidian/ settings local. Use Obsidian CLI move / rename when changing linked filenames so existing links can be updated. Target vault=public-notes explicitly.
 
+## Bundled skills
+
+- Four official Obsidian skills are committed under `.agents/skills/`: obsidian-cli, obsidian-markdown, obsidian-bases, and json-canvas. Load the relevant SKILL.md and its references when the task needs them.
+- Codex discovers these as repository skills when working in this clone. They do not require a user-global installation or machine-specific symlinks.
+- The writing conventions in this guide take precedence over generic examples in the bundled skills, including the use of relative Markdown links for GitHub compatibility.
+- Keep upstream skill files unchanged. Record the source revision and file hashes in skills-lock.json, preserve the upstream license, and put repository-specific policy in this guide.
+- Skills do not install applications. Reading / editing files needs file access; app commands also need Obsidian installed, its official CLI enabled, and the app running.
+
 ## Git and validation
 
 - On each clone, run `python3 scripts/setup.py` to enable repository hooks and install Gitleaks.
