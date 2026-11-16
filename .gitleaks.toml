@@ -1,0 +1,28 @@
+title = "Public notes: secrets and common private data"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "email-address"
+description = "Use example.com placeholders instead of personal email addresses"
+regex = '''(?i)[a-z0-9._%+-]+@(?:[a-z0-9-]+\.)+[a-z]{2,}'''
+
+[[rules.allowlists]]
+regexTarget = "match"
+regexes = [ '''(?i)@(?:users\.noreply\.github\.com|example\.(?:com|org|net))$''' ]
+
+[[rules]]
+id = "local-user-path"
+description = "Do not publish local machine user directories"
+regex = '''(?:/[h]ome/[^/\s'"<>]+/|/[U]sers/[^/\s'"<>]+/|[A-Za-z]:\\[U]sers\\[^\\\s'"<>]+\\)'''
+
+[[rules]]
+id = "labelled-phone-number"
+description = "Do not publish labelled personal phone numbers"
+regex = '''(?i)(?:手机号|手机号码|mobile|phone)[\s:：=]+(?:\+?86[- ]?)?1[3-9][0-9]{9}'''
+
+[[rules]]
+id = "labelled-identity-number"
+description = "Do not publish labelled identity numbers"
+regex = '''(?:身份证|身份证号)[\s:：=]+[1-9][0-9]{16}[0-9Xx]'''

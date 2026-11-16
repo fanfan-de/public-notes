@@ -1,0 +1,46 @@
+# Obsidian settings and per-device state
+.obsidian/
+.trash/
+
+# Private scratch material belongs in another vault; these are a last guard.
+.private/
+private/
+secrets/
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.kdbx
+*.har
+*.log
+*.jsonl
+*.sqlite
+*.sqlite3
+*.db
+
+# Heavy attachments: prefer links to public originals.
+*.pdf
+*.zip
+*.7z
+*.rar
+*.tar
+*.gz
+*.mp4
+*.mov
+*.mkv
+*.mp3
+*.wav
+*.m4a
+
+# Local caches, editors, and generated reports
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+__pycache__/
+*.pyc
+node_modules/
+.venv/
+gitleaks-report.*
