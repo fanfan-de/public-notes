@@ -16,6 +16,6 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Set up local checks
-        run: python3 scripts/setup.py
+        run: python3 scripts/setup.py --checks-only
       - name: Check files and Git history
         run: python3 scripts/check.py --history

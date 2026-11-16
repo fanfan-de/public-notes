@@ -44,14 +44,15 @@ tags:
 python3 scripts/setup.py
 ```
 
-它会安装带校验的固定版本 Gitleaks，并启用本仓库的提交和推送检查。需要 Python 3、Git 和网络；自动安装支持 Linux 与 macOS。
+它会安装带校验的固定版本 Gitleaks、启用本仓库的提交和推送检查，并注册跨项目使用的 `$save-public-note`。需要 Python 3、Git 和网络；自动安装支持 Linux 与 macOS。
 
 ## Agent Skills 随仓库同步
 
-仓库内置四个官方 Skills，完整文件保存在 `.agents/skills/`，无需从这台电脑的用户目录复制：
+仓库内置四个官方 Skills 和一个自定义保存入口，完整文件保存在 `.agents/skills/`：
 
 | Skill | 用途 |
 | --- | --- |
+| `save-public-note` | 从任意项目整理指定内容并保存到本笔记库 |
 | `obsidian-cli` | 读取、检索、创建和管理笔记，以及控制 Obsidian |
 | `obsidian-markdown` | Markdown、属性、链接、提示块等笔记格式 |
 | `obsidian-bases` | Bases 数据视图 |
@@ -61,7 +62,17 @@ python3 scripts/setup.py
 
 Skills 提供操作知识，不会自动安装应用。新电脑仍需安装 Obsidian，把克隆目录作为笔记库打开；若要控制应用，在 Obsidian 设置中开启并注册官方 CLI，并保持应用运行。只有 Markdown 文件读写时，可以直接使用 agent 的文件工具。
 
-`python3 scripts/setup.py` 用于安装提交检查并启用 Git 钩子；Skills 自动发现本身不依赖这个脚本。来源和版本见 [Skills 说明](.agents/skills/README.md) 及 [skills-lock.json](skills-lock.json)。
+运行 `python3 scripts/setup.py` 后，也可以在其他项目中调用 `$save-public-note`。脚本在本机用户 Skills 目录创建指向仓库内保存入口的软链接；入口通过自身真实位置找到笔记库，不依赖当前项目，也不把本机路径写进 Git。仓库内的 Skill 文件本身是实际文件，可随 Git 同步。
+
+例如，在任意项目中说：
+
+> 使用 $save-public-note，把这次讨论中适合公开的知识整理成一篇笔记。
+
+> 使用 $save-public-note，总结这篇文章并保存到阅读分类，然后同步到 GitHub。
+
+默认调用只保存本地笔记；用户要求提交、同步或发布时，再检查并执行相应 Git 操作。换电脑后运行同一个 setup 命令即可注册全局入口；移动或删除克隆目录后，需在保留的克隆中重新运行 setup 修复入口。
+
+项目内 Skills 的自动发现不依赖 setup。只需提交检查、不需全局入口时，可运行 `python3 scripts/setup.py --checks-only`。来源和版本见 [Skills 说明](.agents/skills/README.md) 及 [skills-lock.json](skills-lock.json)。
 
 ## 通过 GitHub 同步
 

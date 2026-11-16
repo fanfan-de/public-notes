@@ -21,15 +21,15 @@ This is a public personal knowledge vault, published through GitHub. AI and agen
 
 ## Bundled skills
 
-- Four official Obsidian skills are committed under `.agents/skills/`: obsidian-cli, obsidian-markdown, obsidian-bases, and json-canvas. Load the relevant SKILL.md and its references when the task needs them.
-- Codex discovers these as repository skills when working in this clone. They do not require a user-global installation or machine-specific symlinks.
+- Four official Obsidian skills and the locally authored save-public-note skill are committed under `.agents/skills/`. Load the relevant SKILL.md and its references when the task needs them. save-public-note is the entry point for capturing explicitly selected public material from other projects.
+- Codex discovers these as repository skills inside this clone without a user-global install. For cross-project capture, setup registers a local user-level alias to save-public-note; the committed skill files remain regular files.
 - The writing conventions in this guide take precedence over generic examples in the bundled skills, including the use of relative Markdown links for GitHub compatibility.
 - Keep upstream skill files unchanged. Record the source revision and file hashes in skills-lock.json, preserve the upstream license, and put repository-specific policy in this guide.
 - Skills do not install applications. Reading / editing files needs file access; app commands also need Obsidian installed, its official CLI enabled, and the app running.
 
 ## Git and validation
 
-- On each clone, run `python3 scripts/setup.py` to enable repository hooks and install Gitleaks.
+- On each clone, run `python3 scripts/setup.py` to enable repository hooks, install Gitleaks, and register save-public-note globally. Use `--checks-only` in CI or when no global entry is wanted.
 - Before editing, use `git pull --ff-only` when the worktree is clean. Preserve existing user changes and resolve conflicts deliberately.
 - Stage only intended files, inspect `git diff --cached`, and run `python3 scripts/check.py` before committing.
 - Use concise commits such as `docs(notes): explain a topic`. Use the owner's GitHub noreply identity for commits made on the owner's behalf.
