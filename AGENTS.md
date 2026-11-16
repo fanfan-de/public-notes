@@ -4,7 +4,7 @@ This is a public personal knowledge vault, published through GitHub. AI and agen
 
 ## Content boundary
 
-- Treat every tracked file, Inbox item, template, and commit as public.
+- Treat every tracked file, collection item, template, and commit as public.
 - Do not add personal life, diaries, schedules, health or financial details, private conversations, credentials, account exports, local machine paths, or unpublished workplace / third-party information.
 - Do not migrate material from another vault or a private conversation without an explicit request identifying content that may be published. New topical notes may summarize public ideas without preserving private chat context.
 - Never invent personal experiences, completed experiments, or opinions on the owner's behalf. Distinguish sourced facts, interpretation, and unverified ideas.
@@ -12,7 +12,7 @@ This is a public personal knowledge vault, published through GitHub. AI and agen
 
 ## Organization and writing
 
-- Start from README.md. Prefer the existing topic directories; add a new topic when actual content needs it.
+- Start from README.md. All content categories live directly at the vault root: AI/, Agent/, 实践/, 阅读/, 收集/, and 模板/. Add new topics as sibling root directories when real content needs them. Keep ordinary notes at category/note.md; use tags and links for finer organization instead of adding folder levels.
 - Notes are primarily Chinese; retain conventional technical terms and names. Keep one main topic per note.
 - Add a title and a small number of useful frontmatter tags. Record dates for time-sensitive observations.
 - Use standard relative Markdown links so both GitHub and Obsidian can navigate them. Use original sources for factual claims and check current information when needed.
