@@ -16,6 +16,7 @@ tags:
 | --- | --- |
 | [AI](AI/README.md) | 模型、检索、推理、评估等主要专题 |
 | [Agent](Agent/README.md) | 工具、上下文、记忆、协议与工作流 |
+| [Anybox](Anybox/README.md) | Anybox 项目的产品、架构、设计决策、实现、部署与验证记录 |
 | [实践](实践/README.md) | 可以公开复现的实验、操作和结果 |
 | [阅读](阅读/README.md) | 论文、文章、书籍和公开资料的阅读记录 |
 | [收集](收集/README.md) | 已经适合公开的选题和简短想法 |
