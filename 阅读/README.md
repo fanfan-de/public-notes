@@ -12,4 +12,6 @@ tags:
 
 - [常驻 Agent 的架构与可靠执行](常驻%20Agent%20的架构与可靠执行.md)：《Building always-on agents》要点，以及任务恢复、幂等、权限和通知的设计建议。
 
+- [AI 原生团队的内部研发协作：Claude、Manus 与脱手循环](AI原生团队的内部研发协作：Claude、Manus与脱手循环.md)：一手内部实践、证据边界，以及中立 Agent 的委托、验证和持续推进规则建议。
+
 [阅读笔记模板](../模板/阅读笔记.md) · [返回首页](../README.md)
