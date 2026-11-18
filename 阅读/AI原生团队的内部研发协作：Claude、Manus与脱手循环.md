@@ -8,7 +8,7 @@ tags:
   - collaboration
   - human-attention
 ---
-
+ 
 # AI 原生团队的内部研发协作：Claude、Manus 与脱手循环
 
 调研日期：**2026-11-17**。研究对象是组织怎样用 AI 研发自己的软件，重点为 Anthropic 的 Claude Code 相关团队和 Manus，补充 OpenAI 的内部研发案例。本文为“构建脱手循环”设计中的“发出 → 接手 → 自主执行 → 回报 → 继续推进”提出规则建议。
